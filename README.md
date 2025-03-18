@@ -1,5 +1,5 @@
 # Application de Gestion de base de donnée Oracle avec ASP.NET 
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/20231104142236/Message-Passing.png" alt="Parc" width="1300" height="400"/>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20231104142236/Message-Passing.png" alt="Parc" width="1250" height="400"/>
 ## Description du Projet
 
 Ce projet repose sur une architecture client-serveur flexible où une machine locale et une machine virtuelle interagissent dynamiquement pour assurer la gestion et la synchronisation des données stockées dans une base de données relationnelle **Oracle**.

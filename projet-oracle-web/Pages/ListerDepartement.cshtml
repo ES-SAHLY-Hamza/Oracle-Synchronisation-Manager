@@ -1,0 +1,295 @@
+﻿@*@page
+@model projet_oracle_web.Pages.ListerEmployeModel
+@{
+}
+<div class="text-center p-4 mb-4 bg-primary text-white rounded">
+    <h1>Liste des Employés</h1>
+    <p>Gestion des employés dans la base Oracle</p>
+</div>
+
+<div class="d-flex justify-content-end mb-3">
+    <a href="/AjouterEmploye" class="btn btn-success">
+        Ajouter un employé
+    </a>
+</div>
+
+<table class="table table-hover table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>EMPNO</th>
+            <th>ENAME</th>
+            <th>JOB</th>
+            <th>HIREDATE</th>
+            <th>SAL</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Employees)
+        {
+            <tr>
+                <td>@emp.EMPNO</td>
+                <td>@emp.ENAME</td>
+                <td>@emp.JOB</td>
+                <td>@emp.HIREDATE.ToString("dd MMM yyyy")</td>
+                <td>@emp.SAL.ToString("C")</td>
+                <td>
+                    <a href="@Url.Page("/Modifier", new { id = emp.EMPNO })" class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil"></i> Modifier
+                    </a>
+                    <a href="@Url.Page("/Supprimer", new { id = emp.EMPNO })" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Supprimer
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Bootstrap Icons for buttons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!------------------------------------------------------Code 2 --------------------------------------------------->
+@page
+@model projet_oracle_web.Pages.ListerEmployeModel
+@{
+}
+<div class="text-center p-4 mb-4 bg-primary text-white rounded wow fadeInUp" data-wow-delay="0.1s">
+    <h1>Liste des Employés</h1>
+    <p>Gestion des employés dans la base Oracle</p>
+</div>
+
+<div class="d-flex justify-content-end mb-3 wow fadeIn" data-wow-delay="0.3s">
+    <a href="/AjouterEmploye" class="btn btn-success btn-lg">
+        Ajouter un employé
+    </a>
+</div>
+
+<table class="table table-hover table-striped wow fadeInUp" data-wow-delay="0.5s">
+    <thead class="table-dark">
+        <tr>
+            <th>EMPNO</th>
+            <th>ENAME</th>
+            <th>JOB</th>
+            <th>HIREDATE</th>
+            <th>SAL</th>
+            <th>DEPTNO</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Employees)
+        {
+            <tr class="animated-row">
+                <td>@emp.EMPNO</td>
+                <td>@emp.ENAME</td>
+                <td>@emp.JOB</td>
+                <td>@emp.HIREDATE.ToString("dd MMM yyyy")</td>
+                <td>@emp.SAL.ToString("C")</td>
+                <td>@emp.DEPTNO</td>
+                <td>
+                    <a href="@Url.Page("/ModifierEmploye", new { id = emp.EMPNO })" class="btn btn-warning btn-sm btn-animate">
+                        <i class="bi bi-pencil"></i> Modifier
+                    </a>
+                    <a href="@Url.Page("/SupprimerEmploye", new { id = emp.EMPNO })" class="btn btn-danger btn-sm btn-animate">
+                        <i class="bi bi-trash"></i> Supprimer
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Bootstrap Icons for buttons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Animate.css for animations -->
+<link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+<style>
+    .animated-row {
+        opacity: 0;
+        animation: fadeInUp 1s forwards, slideIn 1s ease-in-out;
+    }
+    .animated-row:nth-child(odd) {
+        animation-delay: 0.3s;
+    }
+    .animated-row:nth-child(even) {
+        animation-delay: 0.5s;
+    }
+
+    /* Pulse effect for buttons */
+    .btn-animate {
+        animation: pulse 2.5s infinite;
+    }
+    .btn-animate:hover {
+        animation: none; /* Stop pulse on hover */
+        transform: scale(1.1);
+    }
+
+    /* Hover effect on table row */
+    .table-hover tbody tr:hover {
+        background-color: #e9f7ff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effect on table cell */
+    .table-hover tbody tr td:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Zoom effect for action buttons */
+    .btn-animate:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Custom fade-in for the top section */
+    .wow.fadeIn {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .wow.fadeInUp {
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.2/dist/wow.min.js"></script>
+<script>
+    new WOW().init(); // Initializing WOW.js animations
+</script>*@
+
+@page
+@model projet_oracle_web.Pages.ListerDepartementModel
+@{
+}
+
+<div class="text-center p-4 mb-4 bg-primary text-white rounded wow fadeInUp" data-wow-delay="0.1s">
+    <h1>Liste des départements</h1>
+    <p>Gestion des départements dans la base Oracle</p>
+</div>
+
+<div class="d-flex justify-content-end mb-3 wow fadeIn" data-wow-delay="0.3s">
+    <a href="/AjouterDept" class="btn btn-success btn-lg">
+        Ajouter une département
+    </a>
+</div>
+
+<table class="table table-hover table-striped wow fadeInUp" data-wow-delay="0.5s">
+    <thead class="table-dark">
+        <tr>
+            <th>DEPTNO</th>
+            <th>DNAME</th>
+            <th>LOC</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dept in Model.departements)
+        {
+            // Vérifier si cet employé a été récemment modifié
+            bool isModified = TempData["ModifiedDept"] != null && TempData["ModifiedDept"].ToString() == dept.DEPTNO.ToString();
+
+            <tr class="animated-row @(isModified ? "table-success" : "")">
+                <td>@dept.DEPTNO</td>
+                <td>@dept.DNAME</td>
+                <td>@dept.LOC</td>
+                <td class="d-flex justify-content-start" style="gap: 10px;">
+                    <a href="@Url.Page("/ModifierDept", new { id = dept.DEPTNO })" class="btn btn-warning btn-sm btn-animate">
+                        <i class="bi bi-pencil"></i> Modifier
+                    </a>
+                    <a href="@Url.Page("/SupprimerDept", new { id = dept.DEPTNO })" class="btn btn-danger btn-sm btn-animate">
+                        <i class="bi bi-trash"></i> Supprimer
+                    </a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Afficher le Toast en cas de succès -->
+@if (TempData["Message"] != null)
+{
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    @TempData["Message"]
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Bootstrap Icons for buttons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Animate.css for animations -->
+<link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+<style>
+    .animated-row {
+        opacity: 0;
+        animation: fadeInUp 1s forwards, slideIn 1s ease-in-out;
+    }
+
+        .animated-row:nth-child(odd) {
+            animation-delay: 0.3s;
+        }
+
+        .animated-row:nth-child(even) {
+            animation-delay: 0.5s;
+        }
+
+    /* Pulse effect for buttons */
+    .btn-animate {
+        animation: pulse 2.0s infinite;
+    }
+
+        .btn-animate:hover {
+            animation: none; /* Stop pulse on hover */
+            transform: scale(1.1);
+        }
+
+    /* Hover effect on table row */
+    .table-hover tbody tr:hover {
+        background-color: #e9f7ff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effect on table cell */
+    .table-hover tbody tr td:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Zoom effect for action buttons */
+    .btn-animate:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Custom fade-in for the top section */
+    .wow.fadeIn {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .wow.fadeInUp {
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.2/dist/wow.min.js"></script>
+<script>
+    new WOW().init(); // Initializing WOW.js animations
+
+    // Afficher le Toast
+    var toast = new bootstrap.Toast(document.querySelector('.toast'));
+    toast.show();
+</script>

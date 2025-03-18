@@ -1,0 +1,144 @@
+﻿@page
+@model projet_oracle_web.Pages.AjouterEmployeModel
+@{
+    ViewData["Title"] = "Ajouter un Employé";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-light rounded p-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="text-center mb-4">
+                    <h2>Ajouter un Employé</h2>
+                    <p class="text-muted">Entrez les informations de l'employé à ajouter</p>
+                </div>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="EmpNo" class="form-label">Numéro de l'employé</label>
+                        <input type="number" class="form-control" id="EmpNo" name="EmpNo" required placeholder="Entrez le numéro de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Ename" class="form-label">Nom de l'employé</label>
+                        <input type="text" class="form-control" id="Ename" name="Ename" required placeholder="Entrez le nom de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Job" class="form-label">Poste</label>
+                        <input type="text" class="form-control" id="Job" name="Job" required placeholder="Entrez le poste de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Job" class="form-label">Manager</label>
+                        <input type="text" class="form-control" id="MGR" name="MGR" required placeholder="Entrez le Manager de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="HireDate" class="form-label">Date d'embauche</label>
+                        <input type="date" class="form-control" id="HireDate" name="HireDate" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Sal" class="form-label">Salaire</label>
+                        <input type="number" step="0.01" class="form-control" id="Sal" name="Sal" required placeholder="Entrez le salaire de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Sal" class="form-label">Commission</label>
+                        <input type="number" step="0.01" class="form-control" id="Comm" name="Comm" required placeholder="Entrez la commission de l'employé" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="DEPTNO" class="form-label">Numéro de département</label>
+                        <input type="number" class="form-control" id="DEPTNO" name="DEPTNO" required placeholder="Entrez le numéro du département" />
+                    </div>
+                    <div class="d-flex justify-content-center success">
+                        <button type="submit" class="btn btn-lg w-100">Ajouter l'Employé</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons for buttons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Animate.css for animations -->
+<link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+<style>
+    /* Appliquer l'image en arrière-plan */
+    body {
+        background-image: url('/images/srtipe.jpg'); /* Modifier le chemin si nécessaire */
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 230vh;
+        background-attachment: fixed;
+        background-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+    .custom-section h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        color: #514f4f;
+        margin: 0;
+        padding: 20px 0;
+        font-weight: bold;
+    }
+
+    .custom-section p {
+        color: #1877f2; /* Gris pour le texte secondaire */
+        font-style: italic; /* Texte en italique */
+    }
+    .card {
+        background-color: rgba(255, 255, 255, 0.9); /* Fond blanc transparent pour contraster avec l'image */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .success {
+        background-color: #1877f2;
+        border-color: #1877f2;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+        .success:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .success button{
+            color : white;
+        }
+        .success:focus {
+            box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5);
+            color:white
+        }
+
+        .form-control:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+        }
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .wow.fadeInUp {
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    /* Hover effect on form fields */
+    .form-control:hover {
+        border-color: #28a745;
+    }
+
+    /* Shadow effect when the card is hovered */
+    .card:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.2/dist/wow.min.js"></script>
+<script>
+    new WOW().init(); // Initializing WOW.js animations
+</script>

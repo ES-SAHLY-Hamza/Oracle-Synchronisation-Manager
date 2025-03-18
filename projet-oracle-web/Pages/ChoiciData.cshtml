@@ -1,0 +1,216 @@
+﻿@page
+@model projet_oracle_web.Pages.ChoiciDataModel
+@{
+    ViewData["Title"] = "ChoiciData";
+}
+
+<!-- Inclure Font Awesome pour les icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pO8RHCkM25CD9v6tFq0SfV6nppX44X9M1JeX9V9a+ZPkkGrF+xP/FQYpVbXyjUznZQ6V1Z5qz+J+3HQeDlYqfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Ajout d'un fond dégradé */
+    /*body {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background 0.5s ease, color 0.5s ease;
+    }
+*/
+
+    body {
+        background: linear-gradient(145deg, #1a2a6c, #fdbb2d);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ecf0f1; /* Texte clair pour le contraste */
+    transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    /* Conteneur principal */
+    .container {
+        animation: fadeIn 1.5s ease-in-out;
+        max-width: 200px;
+        padding: 20px;
+    }
+
+    /* Boutons stylisés */
+    .choice-card {
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+        width : 50px;
+    }
+
+    .choice-card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Images */
+    .choice-card img {
+        width:  90%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .choice-card img:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        transform: translateY(-5px);
+    }
+
+    /* Légendes */
+    .choice-card p {
+        margin-top: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        color : white;
+    }
+
+    /* Disposition horizontale */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 30px;
+        padding: 30px;
+    }
+
+    /* Dark Theme */
+
+    /* Bouton Mode Sombre */
+    #themeToggle {
+        margin-top: 50px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+    /* Style pour les titres */
+    .container h1, .container h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.5s ease, transform 1.5s ease, color 1s ease;
+    }
+
+    /* Animation du titre principal (h1) */
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    /* Animation du sous-titre (h2) */
+    .container h2 {
+        font-size: 1.3rem;
+        transition-delay: 0.5s;
+    }
+
+    /* L'activation de l'animation avec un délai lorsque la page se charge */
+    .loaded .container h1, .loaded .container h2 {
+        opacity: 1;
+        transform: translateY(0);
+        color: #fff;
+    }
+
+    /* Effet de pulsation continue sans keyframes */
+    .container h1 {
+        animation: none;
+    }
+
+    .container h1:hover {
+        color: #3498db;  /* Change de couleur au survol */
+        transform: scale(1.1);  /* Agrandissement au survol */
+        transition: all 0.1s ease;
+    }
+
+
+    /* Pulsation infinie via CSS avec les transitions */
+    .container h1 {
+        animation: none;
+    }
+
+    /* Ajoutez une transition colorée avec effet de mouvement */
+    .container h1:active {
+        color: #3498db; /* On passe à une couleur bleue */
+        transform: scale(1.1); /* On ajoute un effet de survol (agrandissement) */
+    }
+
+    .loaded h1:hover {
+        color: #3498db;
+    }
+</style>
+
+<script>
+    // Ajouter la classe 'loaded' après que la page est chargée pour activer l'animation
+    window.onload = function() {
+        document.body.classList.add('loaded');
+    };
+
+    // Ajoutez une animation pour pulsation sans keyframes
+    setInterval(function() {
+        document.querySelector('h1').style.color = document.querySelector('h1').style.color === 'rgb(255, 255, 255)' ? '#3498db' : '#fff';
+    }, 2000);  // Change la couleur toutes les 2 secondes
+</script>
+
+
+<div class="container text-center">
+   
+    <h1>Bienvenue Scott !</h1>
+    <h2>Choisissez pour découvrir les données des employés et départements ci-dessous</h2>
+    <div class="row">
+        <!-- Bouton Employé -->
+        <div class="choice-card">
+            <a href="/ListerEmploye" onclick="playClickSound()">
+                <img src="/images/employe.jpg" alt="Employé">
+            </a>
+            <p><i class="fa fa-users" style="color: #fff; margin-right: 10px;"></i> Employé</p>
+        </div>
+
+        <!-- Bouton Département -->
+        <div class="choice-card">
+            <a href="/ListerDepartement" onclick="playClickSound()">
+                <img src="/images/departement.jpg" alt="Département">
+            </a>
+            <p><i class="fa fa-building" style="color: #fff; margin-right: 10px;"></i> Département</p>
+        </div>
+    </div>
+
+    <!-- Bouton Mode Sombre -->
+    <button id="themeToggle" onclick="toggleTheme()" class="btn btn-light">🌗 Mode</button>
+</div>
+
+<!-- Inclure Font Awesome Script (optionnel, si nécessaire) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-VlG9AzNHSBEuLzC2ZOHqW3PpEwtAnbIef8LZ12rSC6Z+qv+ZdgUmlogHwj3RgELPyo0P3e1X+xm7h4jVX7p8dw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    // Lecture du son au clic
+    function playClickSound() {
+        const audio = new Audio('/sounds/son.mp3'); // Remplacez par votre fichier de son
+        audio.play();
+
+        // Arrêter la lecture après 3 secondes
+        setTimeout(() => {
+            audio.pause();
+            audio.currentTime = 0; // Réinitialiser pour un prochain clic
+        }, 3000); // 3000 millisecondes = 3 secondes
+    }
+
+    // Basculer entre le thème clair et le thème sombre
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+    }
+</script>

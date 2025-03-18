@@ -1,0 +1,61 @@
+﻿@page
+@model projet_oracle_web.Pages.ModifierDepartementModel
+@{
+    ViewData["Title"] = "Modifier une département";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-light rounded p-4">
+                <div class="text-center mb-4">
+                    <h2 class="text-warning">Modifier une département</h2>
+                    <p class="text-muted">Modifiez les informations du département</p>
+                </div>         
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="DEPTNO" class="form-label">Numéro de département</label>
+                        <input type="number" class="form-control" id="DEPTNO" name="DEPTNO" value="@Model.dept.DEPTNO" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label for="DNAME" class="form-label">Nom de département</label>
+                        <input type="text" class="form-control" id="DNAME" name="DNAME" value="@Model.dept.DNAME" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="LOC" class="form-label">Localisation</label>
+                        <input type="text" class="form-control" id="LOC" name="LOC" value="@Model.dept.LOC" required />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-warning btn-lg w-100" style="color: white; font-size: 200">Modifier</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Appliquer l'image en arrière-plan */
+    body {
+        background-image: url('/images/srtipe.jpg'); /* Modifier le chemin si nécessaire */
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 230vh;
+        background-attachment: fixed;
+        background-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.9); /* Fond blanc transparent pour contraster avec l'image */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 70px;
+        padding: 50px;
+    }
+
+</style >

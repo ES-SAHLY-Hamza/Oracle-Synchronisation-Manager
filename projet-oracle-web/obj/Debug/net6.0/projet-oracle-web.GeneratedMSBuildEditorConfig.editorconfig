@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = projet_oracle_web
+build_property.RootNamespace = projet_oracle_web
+build_property.ProjectDir = D:\4eme annee ESISA\ModulesS7\Oracle\Projet-oracle\projet-oracle-web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\4eme annee ESISA\ModulesS7\Oracle\Projet-oracle\projet-oracle-web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/AjouterDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWpvdXRlckRlcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/AjouterEmploye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWpvdXRlckVtcGxveWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Authentification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/ChoiciData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hvaWNpRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/ListerDepartement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGVyRGVwYXJ0ZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/ListerEmploye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGVyRW1wbG95ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/ModifierDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kaWZpZXJEZXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/ModifierEmploye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kaWZpZXJFbXBsb3llLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Shared/_layoutPrincipale.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9sYXlvdXRQcmluY2lwYWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/SupprimerDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcHJpbWVyRGVwdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/SupprimerEmploye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcHJpbWVyRW1wbG95ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/4eme annee ESISA/ModulesS7/Oracle/Projet-oracle/projet-oracle-web/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xalxbr6xe0

@@ -1,0 +1,90 @@
+﻿@page
+@model projet_oracle_web.Pages.SupprimerEmployeModel
+@{
+    ViewData["Title"] = "Supprimer un Employé";
+}
+<div class="text-center p-4 mb-4 bg-danger text-white rounded wow fadeInUp" data-wow-delay="0.1s">
+    <h1 class="display-6"><i class="bi bi-exclamation-triangle-fill me-2"></i> Suppression d'un Employé</h1>
+    <p class="fw-light">Êtes-vous sûr de vouloir supprimer cet employé ? Cette action est irréversible.</p>
+</div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-5">
+            <div class="card shadow-lg border-0 rounded p-4 bg-light position-relative">
+                <form method="post" class="needs-validation">
+                    <div class="form-group mb-3">
+                        <label for="EmpNo" class="form-label small">Numéro de l'employé</label>
+                        <input type="number" class="form-control form-control-sm" id="EmpNo" name="EmpNo" value="@Model.Employee.EMPNO" readonly />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Ename" class="form-label small">Nom de l'employé</label>
+                        <input type="text" class="form-control form-control-sm" id="Ename" name="Ename" value="@Model.Employee.ENAME" readonly />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Job" class="form-label small">Poste</label>
+                        <input type="text" class="form-control form-control-sm" id="Job" name="Job" value="@Model.Employee.JOB" readonly />
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="submit" class="btn btn-danger btn-lg px-4 shadow-sm animate-delete">
+                            <i class="bi bi-trash"></i> Supprimer
+                        </button>
+                        <a href="/ListerEmploye" class="btn btn-secondary btn-lg px-4 shadow-sm">
+                            <i class="bi bi-arrow-left"></i> Annuler
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/srtipe.jpg'); /* Modifier le chemin si nécessaire */
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 230vh;
+        background-attachment: fixed;
+        background-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .card {
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparence */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-danger {
+        background: linear-gradient(90deg, #ff4e50, #f9d423);
+        border: none;
+    }
+
+        .btn-danger:hover {
+            background: linear-gradient(90deg, #f9d423, #ff4e50);
+        }
+
+    .animate-delete {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .animate-delete:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+        }
+
+    .btn-secondary {
+        background: #6c757d;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

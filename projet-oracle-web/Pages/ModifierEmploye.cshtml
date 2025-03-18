@@ -1,0 +1,73 @@
+﻿@page
+@model projet_oracle_web.Pages.ModifierEmployeModel
+@{
+    ViewData["Title"] = "Modifier un Employé";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-light rounded p-4">
+                <div class="text-center mb-4">
+                    <h2 class="text-warning">Modifier un Employé</h2>
+                    <p class="text-muted">Modifiez les informations de l'employé</p>
+                </div>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="EmpNo" class="form-label">Numéro de l'employé</label>
+                        <input type="number" class="form-control" id="EmpNo" name="EmpNo" value="@Model.Employee.EMPNO" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Ename" class="form-label">Nom de l'employé</label>
+                        <input type="text" class="form-control" id="Ename" name="Ename" value="@Model.Employee.ENAME" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Job" class="form-label">Poste</label>
+                        <input type="text" class="form-control" id="Job" name="Job" value="@Model.Employee.JOB" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="MGR" class="form-label">Manager</label>
+                        <input type="text" class="form-control" id="MGR" name="MGR" value="@Model.Employee.MGR" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="HireDate" class="form-label">Date d'embauche</label>
+                        <input type="date" class="form-control" id="HireDate" name="HireDate" value="@Model.Employee.HIREDATE.ToString("yyyy-MM-dd")" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Sal" class="form-label">Salaire</label>
+                        <input type="number" step="0.01" class="form-control" id="Sal" name="Sal" value="@Model.Employee.SAL" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="COMM" class="form-label">Commission</label>
+                        <input type="text" class="form-control" id="COMM" name="COMM" value="@Model.Employee.COMM" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="DEPTNO" class="form-label">Numéro de département</label>
+                        <input type="number" class="form-control" id="DEPTNO" name="DEPTNO" value="@Model.Employee.DEPTNO" required />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-warning btn-lg w-100">Modifier</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Appliquer l'image en arrière-plan */
+    body {
+        background-image: url('/images/srtipe.jpg'); /* Modifier le chemin si nécessaire */
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 230vh;
+        background-attachment: fixed;
+        background-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+</style >

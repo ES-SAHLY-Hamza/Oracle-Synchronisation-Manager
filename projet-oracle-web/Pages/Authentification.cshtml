@@ -1,0 +1,132 @@
+﻿@page
+@model projet_oracle_web.Pages.AuthentificationModel
+@{
+    ViewData["Title"] = "Authentification";
+}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h1 class="auth-title">Bienvenue</h1>
+        <p class="auth-subtitle">Connectez-vous pour accéder à vos données</p>
+        <form method="post">
+            <div class="input-group">
+                <label for="username" class="input-label">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" class="input-field" required />
+            </div>
+            <div class="input-group">
+                <label for="password" class="input-label">Mot de passe</label>
+                <input type="password" id="password" name="password" class="input-field" required />
+            </div>
+            @if (Model.ErrorMessage != null)
+            {
+                <p class="error-message">@Model.ErrorMessage</p>
+            }
+            <button type="submit" class="auth-button">Se connecter</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* Fond animé avec un dégradé dynamique */
+    body {
+        background-image: url('/images/srtipe.jpg'); /* Modifier le chemin si nécessaire */
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 230vh;
+        background-attachment: fixed;
+        background-position: center top;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+
+    /* Carte centrale pour l'authentification */
+    .auth-container {
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding : 80px;
+    }
+
+    .auth-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin-right : 120px;
+    }
+
+    .auth-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .auth-subtitle {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .input-label {
+        display: block;
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+
+    .input-field:focus {
+        outline: none;
+        border-color: #1e90ff;
+        box-shadow: 0px 0px 5px rgba(30, 144, 255, 0.5);
+    }
+
+    .auth-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        color: #fff;
+        background: #1e90ff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .auth-button:hover {
+        background: #4682b4;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+        color: #ff4d4f;
+        margin-bottom: 15px;
+    }
+
+    
+</style>

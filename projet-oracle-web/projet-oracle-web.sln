@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projet-oracle-web", "projet-oracle-web.csproj", "{D420CE2D-2DDF-4AFE-8409-B07D5F709969}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D420CE2D-2DDF-4AFE-8409-B07D5F709969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D420CE2D-2DDF-4AFE-8409-B07D5F709969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D420CE2D-2DDF-4AFE-8409-B07D5F709969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D420CE2D-2DDF-4AFE-8409-B07D5F709969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A755D6E7-A405-4171-99CB-5BB6CBA91879}
+	EndGlobalSection
+EndGlobal

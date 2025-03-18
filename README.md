@@ -1,7 +1,5 @@
-# ESISA - Application de Gestion des Bases de Données avec ASP.NET C# et Oracle
+# Application de Gestion des Bases de Données avec ASP.NET C# et Oracle
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231104142236/Message-Passing.png" alt="Parc" width="1300" height="400"/>
-
-# A
 
 ## Description du Projet
 

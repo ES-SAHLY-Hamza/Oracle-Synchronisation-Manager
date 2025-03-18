@@ -1,10 +1,9 @@
-# Application de Gestion de base de donnée Oracle avec ASP.NET 
+# Application de Gestion et synchronisation des données sous Oracle
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231104142236/Message-Passing.png" alt="Parc" width="1250" height="400"/>
 
 ## Description du Projet
 
-Ce projet repose sur une architecture client-serveur flexible où une machine locale et une machine virtuelle interagissent dynamiquement pour assurer la gestion et la synchronisation des données stockées dans une base de données relationnelle **Oracle**.
-L’application, développée en **ASP.NET C#**, permet de **gérer, modifier et synchroniser** les informations entre les deux machines en **temps réel**, avec la possibilité d’inverser les rôles de **client et serveur**.
+Ce projet repose sur une architecture client-serveur flexible où une machine locale et une machine virtuelle interagissent dynamiquement pour assurer la gestion et la synchronisation des données stockées dans une base de données relationnelle **Oracle**.L’application, développée en **ASP.NET C#**, permet de **gérer, modifier et synchroniser** les informations entre les deux machines en **temps réel**, avec la possibilité d’inverser les rôles de **client et serveur**.
 
 ## Fonctionnalités Principales
 
